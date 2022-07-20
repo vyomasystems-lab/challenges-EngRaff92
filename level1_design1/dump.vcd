@@ -1,0 +1,331 @@
+$date
+	Wed Jul 20 15:01:09 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mux $end
+$var wire 2 ! inp0 [1:0] $end
+$var wire 2 " inp1 [1:0] $end
+$var wire 2 # inp10 [1:0] $end
+$var wire 2 $ inp11 [1:0] $end
+$var wire 2 % inp12 [1:0] $end
+$var wire 2 & inp13 [1:0] $end
+$var wire 2 ' inp14 [1:0] $end
+$var wire 2 ( inp15 [1:0] $end
+$var wire 2 ) inp16 [1:0] $end
+$var wire 2 * inp17 [1:0] $end
+$var wire 2 + inp18 [1:0] $end
+$var wire 2 , inp19 [1:0] $end
+$var wire 2 - inp2 [1:0] $end
+$var wire 2 . inp20 [1:0] $end
+$var wire 2 / inp21 [1:0] $end
+$var wire 2 0 inp22 [1:0] $end
+$var wire 2 1 inp23 [1:0] $end
+$var wire 2 2 inp24 [1:0] $end
+$var wire 2 3 inp25 [1:0] $end
+$var wire 2 4 inp26 [1:0] $end
+$var wire 2 5 inp27 [1:0] $end
+$var wire 2 6 inp28 [1:0] $end
+$var wire 2 7 inp29 [1:0] $end
+$var wire 2 8 inp3 [1:0] $end
+$var wire 2 9 inp30 [1:0] $end
+$var wire 2 : inp4 [1:0] $end
+$var wire 2 ; inp5 [1:0] $end
+$var wire 2 < inp6 [1:0] $end
+$var wire 2 = inp7 [1:0] $end
+$var wire 2 > inp8 [1:0] $end
+$var wire 2 ? inp9 [1:0] $end
+$var wire 5 @ sel [4:0] $end
+$var reg 2 A out [1:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 A
+bz @
+b0 ?
+b0 >
+b0 =
+b0 <
+b0 ;
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b0 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b1 A
+b1 !
+b0 @
+#11
+b1 "
+b1 @
+#12
+b1 -
+b10 @
+#13
+b1 8
+b11 @
+#14
+b1 :
+b100 @
+#15
+b1 ;
+b101 @
+#16
+b1 <
+b110 @
+#17
+b1 =
+b111 @
+#18
+b1 >
+b1000 @
+#19
+b1 ?
+b1001 @
+#20
+b1 #
+b1010 @
+#21
+b1 $
+b1011 @
+#22
+b1 %
+b1100 @
+#23
+b1 &
+b1101 @
+#24
+b1 '
+b1110 @
+#25
+b1 (
+b1111 @
+#26
+b1 )
+b10000 @
+#27
+b1 *
+b10001 @
+#28
+b1 +
+b10010 @
+#29
+b1 ,
+b10011 @
+#30
+b1 .
+b10100 @
+#31
+b1 /
+b10101 @
+#32
+b1 0
+b10110 @
+#33
+b1 1
+b10111 @
+#34
+b1 2
+b11000 @
+#35
+b1 3
+b11001 @
+#36
+b1 4
+b11010 @
+#37
+b1 5
+b11011 @
+#38
+b1 6
+b11100 @
+#39
+b1 7
+b11101 @
+#40
+b1 9
+b11110 @
+#41
+b0 A
+b0 !
+b0 "
+b0 -
+b0 8
+b0 :
+b0 ;
+b0 <
+b0 =
+b0 >
+b0 ?
+b0 #
+b0 $
+b0 %
+b0 &
+b0 '
+b0 (
+b0 )
+b0 *
+b0 +
+b0 ,
+b0 .
+b0 /
+b0 0
+b0 1
+b0 2
+b0 3
+b0 4
+b0 5
+b0 6
+b0 7
+b0 9
+#51
+b10011 @
+#52
+b11 @
+#53
+b1100 @
+#54
+b101 @
+#55
+b10 @
+#56
+b11100 @
+#57
+b1111 @
+#58
+b11000 @
+#59
+b10010 @
+#60
+b110 @
+#61
+b100 @
+#62
+b10101 @
+#63
+b10000 @
+#64
+b10111 @
+#65
+b10011 @
+#66
+b10001 @
+#67
+b10110 @
+#68
+b11010 @
+#69
+b10110 @
+#70
+b10111 @
+#71
+b110 @
+#72
+b11100 @
+#73
+b10 @
+#74
+b10100 @
+#75
+b11010 @
+#76
+b11110 @
+#77
+b11100 @
+#78
+b10101 @
+#79
+b11110 @
+#80
+b1010 @
+#81
+b1001 @
+#82
+b110 @
+#83
+b1010 @
+#84
+b10100 @
+#85
+b0 @
+#86
+b1110 @
+#87
+b10101 @
+#88
+b11110 @
+#89
+b110 @
+#90
+b10101 @
+#91
+b11101 @
+#92
+b11010 @
+#93
+b10110 @
+#94
+b10101 @
+#95
+b1 @
+#96
+b11110 @
+#97
+b1010 @
+#98
+b10010 @
+#99
+b1010 @
+#100
+b10111 @
+#101
+b111 @
+#102
+b1010 @
+#103
+b111 @
+#104
+b0 @
+#105
+b1011 @
+#106
+b10110 @
+#107
+b10000 @
+#108
+b11110 @
+#109
+b11001 @
+#110
+b1010 @
+#112
+b10001 @
+#114
