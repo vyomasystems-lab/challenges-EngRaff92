@@ -39,6 +39,7 @@ async def test_mux(dut):
             assert dut.out.value == 1, "For input {0:b} value selected is not 1 as expected".format(inp)
         else:
             assert dut.out.value == 0, "For input {0:b} value selected is not 0 as expected".format(inp)
+        assert dut.out.value.is_resolvable, "For input {0:b} value is UNKNOWN".format(inp)
 
     ## as separator value let's zeroing out all the input
     for inp in range(MAX_LEN):
@@ -70,3 +71,4 @@ async def test_mux(dut):
             assert dut.out.value == result, "For input port: {0:d} selector is: {0:b} value sampled is: {0:b} value expected is: {0:b}".format(port_s,select,dut.out.value,result)
         else:
             assert dut.out.value == 0, "Last Element selector is: {0:b} value sampled is: {0:b} value expected is: {0:b}".format(port_s,select,dut.out.value,0)            
+        assert dut.out.value.is_resolvable, "For input {0:b} value is UNKNOWN".format(port_s)
