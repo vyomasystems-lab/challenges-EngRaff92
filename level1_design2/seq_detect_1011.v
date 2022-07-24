@@ -7,17 +7,16 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
   input reset;
   input clk;
 
-  parameter IDLE = 0,
-            SEQ_1 = 1, 
-            SEQ_10 = 2,
-            SEQ_101 = 3,
-            SEQ_1011 = 4;
+  parameter IDLE      = 0,
+            SEQ_1     = 1, 
+            SEQ_10    = 2,
+            SEQ_101   = 3,
+            SEQ_1011  = 4;
 
   reg [2:0] current_state, next_state;
 
-  // if the current state of the FSM has the sequence 1011, then the output is
-  // high
-  assign seq_seen = current_state == SEQ_1011 ? 1 : 0;
+  // if the current state of the FSM has the sequence 1011, then the output is high
+  assign seq_seen = (current_state == SEQ_1011);
 
   // state transition
   always @(posedge clk)
@@ -46,7 +45,7 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
       SEQ_1:
       begin
         if(inp_bit == 1)
-          next_state = IDLE;
+          next_state = SEQ_1;
         else
           next_state = SEQ_10;
       end
@@ -62,12 +61,22 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
         if(inp_bit == 1)
           next_state = SEQ_1011;
         else
-          next_state = IDLE;
+          next_state = SEQ_10;
       end
       SEQ_1011:
       begin
-        next_state = IDLE;
+        if(inp_bit)
+          next_state = SEQ_1;
+        else
+          next_state = SEQ_10;
       end
     endcase
   end
+
+`ifdef COCOTB_SIM
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars(0);
+  end
+`endif
 endmodule
