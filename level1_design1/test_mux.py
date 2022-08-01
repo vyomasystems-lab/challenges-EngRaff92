@@ -4,6 +4,7 @@ import cocotb
 from cocotb.triggers import Timer
 from functools import reduce
 from random import randrange
+from math import log
 
 MAX_LEN = 31
 STD_TIME= 1
@@ -29,7 +30,7 @@ async def test_mux(dut):
 
     ## Define signal name as string and set all values
     for inp in range(MAX_LEN):
-        ## Set al input to 1
+        ## Set all input to 1
         if(inp != MAX_LEN):
             reduce(getattr, "inp{}".format(inp).split("."), dut).value = 1
         ## Set the selector
@@ -54,7 +55,7 @@ async def test_mux(dut):
         ## Set al input to random
         result = randrange(0,1)
         ##result = 1
-        select = randrange(0,MAX_LEN)
+        select = randrange(0,int(log(MAX_LEN, 2)))
         port_s = randrange(0,MAX_LEN)
         if(port_s != MAX_LEN):
             reduce(getattr, "inp{}".format(port_s).split("."), dut).value = result

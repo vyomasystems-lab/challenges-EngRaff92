@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul 27 23:09:38 2022
+# Make data base, printed on Mon Aug  1 14:35:49 2022
 
 # Variables
 
@@ -103,7 +101,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 PYENV_ROOT = /home/gitpod/.pyenv
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-8ed11cac-9755-4c8e-945e-55d7c03b50ed.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-e0dd823a-0bf6-47f0-b093-6eb3b0c451e2.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -145,7 +143,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
-GITPOD_CLI_APITOKEN = 1yegZJs8Bb5ZJwedC9p4_-6fPWzbt4yz
+GITPOD_CLI_APITOKEN = kKU2pqMmNtzxRnoT7Cr1N-XYUO6jnReW
 # automatic
 +F = $(notdir $+)
 # environment
@@ -277,7 +275,7 @@ NGINX_DOCROOT_IN_REPO = public
 # environment
 rvm_loaded_flag = 1
 # environment
-GITPOD_INSTANCE_ID = 66472949-823f-4c5f-b820-a906d9d0ac08
+GITPOD_INSTANCE_ID = a565a384-5d91-44eb-8c02-798d278d3c76
 # environment
 GITPOD_WORKSPACE_URL = https://vyomasystem-challengese-qee4z1znmm9.ws-eu54.gitpod.io
 # default
@@ -295,7 +293,7 @@ MY_RUBY_HOME = /home/gitpod/.rvm/rubies/ruby-2.7.6
 
 # Directories
 
-# . (device 2346, inode 4162836937): 14 files, no impossibilities.
+# . (device 2346, inode 2555236382): 14 files, no impossibilities.
 
 # 14 files, no impossibilities in 1 directories.
 
@@ -353,6 +351,8 @@ GNUmakefile:
 # strcache performance: lookups = 25 / hit rate = 12%
 # hash-table stats:
 # Load=22/8192=0%, Rehash=0, Collisions=1/25=4%
-# Finished Make data base on Wed Jul 27 23:09:38 2022
+# Finished Make data base on Mon Aug  1 14:35:49 2022
 
  
+make: *** No rule to make target 'all'.  Stop.
+
