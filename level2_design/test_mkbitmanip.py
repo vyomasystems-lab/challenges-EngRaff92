@@ -82,10 +82,8 @@ async def run_test(dut):
     ## Error counter: use a dict to store count error per instruction to limit the log
     ErrorDict   = {}
     ErrorCNT    = 0
-    ## LImit value according to how big the SRC register are
-    isRTYPE     = 2**5
-    isITYPE     = 2**7
-    SpaceLimit  = 0
+    ## Limit value according to how big the SRC register are, this represnet the space value to be put 
+    SpaceLimit  = 2**15
     for Itype in IIstr.keys():
         print("Testing TYPE: {}".format(Itype))
         for instr in IIstr[Itype].keys():
@@ -99,21 +97,22 @@ async def run_test(dut):
                 mav_putvalue_src2 = []
                 mav_putvalue_src3 = []
                 placeholderInstr  = []
-                ## SET the limit
-                SpaceLimit = isITYPE if(Itype == "ITYPE") else isRTYPE
 
                 # Each SRC is a 5 bit register, SRC3 is not always used for all the instructions same for SRC2
                 for tot in range(SpaceLimit):
-                    mav_putvalue_src1.append(tot)
+                    mav_putvalue_src1.append(random.randrange(0,2**32-1))
                     ## For an ITYPE instruction RS2 becomes a Immediate value
-                    mav_putvalue_src2.append(tot)
+                    if(Itype == "ITYPE" or instr == "FSRI"):
+                        mav_putvalue_src2.append(random.randrange(0,2**7-1))
+                    else:
+                        mav_putvalue_src2.append(random.randrange(0,2**32-1))
                     ## TEST out that RS3 is not used while not required
                     if(Itype != "R4TYPE"):
                         ## F7
                         mav_putvalue_src3.append(iis[0])
                     else:
                         ## DATA
-                        mav_putvalue_src3.append(tot)
+                        mav_putvalue_src3.append(random.randrange(0,2**32-1))
 
                 ## Compute the instruction
                 if(Itype == "RTYPE"):
@@ -158,7 +157,7 @@ async def run_test(dut):
                 # -> if we have an IMM instruction we skip SRC2 and we get IMM
                 # -> if we have a not FUNC7 used instruction then we use SRC1-2-3
                 # -> if we one of the remaining instruction instead we do used only SRC1-2
-                for tot in range(2**5):
+                for tot in range(SpaceLimit):
                     # PRINT STATE
                     cocotb.log.debug("SRC1: {}".format(bin(mav_putvalue_src1[tot])))
                     cocotb.log.debug("SRC2: {}".format(bin(mav_putvalue_src2[tot])))
